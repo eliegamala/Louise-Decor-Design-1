@@ -1,19 +1,10 @@
-import { loadJSON } from '@/lib/content';
-import { loadFolder } from '@/lib/content';
-import CMSHeader from '@/components/CMSHeader';
+// pages/portfolio.tsx
+import { loadJSON, loadFolder } from '@/lib/content';
 import Image from "next/image";
-import clsx from "clsx";
+import { useEffect, useState } from 'react';
+import Layout from '@/components/Layout';
+import type { GetStaticProps } from 'next';
 
-/**
- * Manually add/edit your projects here.
- * - id: unique slug
- * - title: main title
- * - subtext: short subtitle shown on the card
- * - cover: the card/hero image
- * - images: optional gallery images for the modal (first can be same as cover)
- * - description: short paragraph for the modal
- * - meta: extra info rendered in the modal (location, year, scope, etc.)
- */
 type Project = {
   id: string;
   title: string;
@@ -24,70 +15,47 @@ type Project = {
   meta?: Record<string, string>;
 };
 
-const projects: Project[] = [
-  {
-    id: "res-01",
-    title: "Residence 01",
-    subtext: "Kitchen & living refresh",
-    cover: "/images/project-1.jpg",
-    images: ["/images/project-1.jpg", "/images/project-2.jpg", "/images/project-3.jpg"],
-    description:
-      "A warm, layered update balancing durable finishes with a softer lighting plan. Storage was rethought to clear counters and invite gathering.",
-    meta: { Location: "Cape Town", Year: "2025", Scope: "Full-service Design" },
-  },
-  {
-    id: "res-02",
-    title: "Residence 02",
-    subtext: "Calm bedroom suite",
-    cover: "/images/project-2.jpg",
-    images: ["/images/project-2.jpg", "/images/project-1.jpg"],
-    description:
-      "Quiet textures and a restrained palette to shift the energy of rest. Window treatments and lighting create a day-to-night transition.",
-    meta: { Location: "Johannesburg", Year: "2024", Scope: "Furnishings & Styling" },
-  },
-  {
-    id: "res-03",
-    title: "Residence 03",
-    subtext: "Family living room",
-    cover: "/images/project-3.jpg",
-    images: ["/images/project-3.jpg", "/images/project-2.jpg"],
-    description:
-      "Comfort-first seating, kid-friendly materials, and layered light. Heirloom pieces integrated to keep the space personal.",
-    meta: { Location: "Stellenbosch", Year: "2024", Scope: "Room Refresh" },
-  },
-  // add more…
-];
-
-import type { GetStaticProps } from 'next';
-import { useEffect, useState } from 'react';
-import Layout from '@/components/Layout';
-
 export const getStaticProps: GetStaticProps = async () => {
+  // Page shell (SEO, heading, intro) lives in content/portfolio.json
   const page = loadJSON('portfolio.json');
-  const projects = loadFolder('portfolio');
-  return { props: { page, projects } };
+
+  // Load all JSON files in content/portfolio/*.json
+  const raw = loadFolder('portfolio')
+    // exclude the page shell (must have "__is_page_shell": true in content/portfolio.json)
+    .filter((f: any) => f?.__is_page_shell !== true);
+
+  // If CMS stores meta as [{key, value}], convert to { key: value }
+  const projects: Project[] = raw.map((p: any) => ({
+    ...p,
+    meta: Array.isArray(p?.meta)
+      ? Object.fromEntries(p.meta.map((m: any) => [m.key, m.value]))
+      : (p.meta ?? {})
+  }));
+
+  return {
+    props: { page, projects },
+    revalidate: 60, // ISR: pick up new/edited projects shortly after publish
+  };
 };
 
-export default function Portfolio(): JSX.Element {
+export default function Portfolio({ page, projects }: { page: any; projects: Project[] }): JSX.Element {
   const [active, setActive] = useState<Project | null>(null);
 
   // Lock body scroll when modal is open
   useEffect(() => {
     document.documentElement.style.overflow = active ? "hidden" : "";
-    return () => {
-      document.documentElement.style.overflow = "";
-    };
+    return () => { document.documentElement.style.overflow = ""; };
   }, [active]);
 
+  const seoTitle = page?.seo?.title ? `${page.seo.title} – Louise Decor & Design` : 'Portfolio – Louise Decor & Design';
+  const seoDesc = page?.seo?.description ?? 'Selected interior design projects by Louise Decor & Design.';
+
   return (
-    <Layout
-      title="Portfolio – Hayes Valley Interior Design"
-      description="Selected interior design projects by Hayes Valley Interior Design."
-      canonical="/portfolio"
-    >
+    <Layout title={seoTitle} description={seoDesc} canonical="/portfolio">
       <section className="section">
         <div className="container-wide">
-          <h1 className="font-display text-3xl mb-6">Portfolio</h1>
+          <h1 className="font-display text-3xl mb-2">{page?.heading ?? 'Portfolio'}</h1>
+          {page?.intro && <p className="text-neutral-600 mb-6">{page.intro}</p>}
 
           {/* Grid of cards */}
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -110,9 +78,7 @@ export default function Portfolio(): JSX.Element {
                 </div>
                 <div className="p-4">
                   <div className="font-medium">{p.title}</div>
-                  {p.subtext && (
-                    <div className="text-sm text-neutral-600">{p.subtext}</div>
-                  )}
+                  {p.subtext && <div className="text-sm text-neutral-600">{p.subtext}</div>}
                 </div>
               </button>
             ))}
@@ -142,7 +108,6 @@ function Modal({
   onClose: () => void;
   title?: string;
 }) {
-  // ESC to close
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -157,10 +122,7 @@ function Modal({
       aria-label={title || "Project details"}
     >
       {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       {/* Dialog */}
       <div className="relative bg-white rounded-3xl shadow-2xl max-w-5xl w-[92vw] max-h-[88vh] overflow-hidden">
         {/* Header */}
