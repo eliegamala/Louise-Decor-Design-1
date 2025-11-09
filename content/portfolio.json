@@ -1,8 +1,1 @@
-{
-  "seo": {
-    "title": "Portfolio",
-    "description": ""
-  },
-  "heading": "Portfolio",
-  "intro": ""
-}
+{ "__is_page_shell": true, "seo": { "title": "Portfolio", "description": "" }, "heading": "Portfolio", "intro": "" }
