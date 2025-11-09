@@ -41,12 +41,14 @@ collections:
               - { label: Background Class, name: bgClassName, widget: string, required: false }
               - { label: Primary Link, name: primaryHref, widget: string }
               - { label: Secondary Link, name: secondaryHref, widget: string, required: false }
+
           - label: Testimonials
             name: testimonials
             widget: list
             fields:
               - { label: Image, name: src, widget: image }
               - { label: Quote, name: quote, widget: text }
+
           - label: Parallax Section
             name: parallax
             widget: object
@@ -61,6 +63,7 @@ collections:
                   - { label: Button Label, name: ctaLabel, widget: string, required: false }
                   - { label: Link, name: href, widget: string }
                   - { label: Variant (primary/ghost), name: variant, widget: string, default: ghost }
+
           - label: About Me
             name: about
             widget: object
@@ -69,6 +72,7 @@ collections:
               - { label: Detail Image 1, name: detail1, widget: image }
               - { label: Detail Image 2, name: detail2, widget: image }
               - { label: Headshot (optional), name: headshot, widget: image, required: false }
+
           - label: Featured Project
             name: featured
             widget: object
@@ -83,6 +87,7 @@ collections:
                 field: { label: Item, name: item, widget: string }
               - { label: CTA Label, name: ctaLabel, widget: string, required: false, default: "View project" }
               - { label: CTA Link, name: ctaHref, widget: string }
+
           - label: Services
             name: services
             widget: list
@@ -90,6 +95,15 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Body, name: body, widget: text }
               - { label: Emphasis (optional), name: emphasis, widget: boolean, required: false }
+
+          - label: Services Settings
+            name: servicesMeta
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string, required: false, default: "Services at a glance" }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false, default: "Start a project" }
+              - { label: CTA Link, name: ctaHref, widget: string, required: false, default: "/contact" }
+
           - label: Services Side Image
             name: servicesImage
             widget: object
