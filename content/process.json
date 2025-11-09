@@ -9,17 +9,21 @@
     {
       "title": "Discovery",
       "body": "We learn your routines, constraints, and goals.",
-      "image": "/images/uploads/step-1.jpg"
+      "image": ""
     },
     {
       "title": "Design",
       "body": "Layouts, materials, and lighting come together.",
-      "image": "/images/uploads/step-2.jpg"
+      "image": ""
     },
     {
       "title": "Delivery",
       "body": "Procurement, coordination, and install to the last detail.",
-      "image": "/images/uploads/step-3.jpg"
+      "image": ""
+    },
+    {
+      "title": "final",
+      "body": "lorem ipsum "
     }
   ],
   "overview": {
@@ -27,8 +31,14 @@
     "heading": "From idea to lived-in comfort",
     "body": "We combine classic design principles with your day-to-day realities—circulation, storage, light, and the tactile details that make a room feel like home.",
     "highlights": [
-      { "title": "Clarity at each step", "text": "You’ll know what’s next and why it matters." },
-      { "title": "Timeless over trendy", "text": "Materials and forms that age gracefully." }
+      {
+        "title": "Clarity at each step",
+        "text": "You’ll know what’s next and why it matters."
+      },
+      {
+        "title": "Timeless over trendy",
+        "text": "Materials and forms that age gracefully."
+      }
     ]
   },
   "case": {
@@ -46,11 +56,26 @@
   "expect": {
     "heading": "What to expect",
     "cards": [
-      { "title": "Decisions made simple", "body": "Clear options with pros/cons, pricing, and visuals—no guesswork." },
-      { "title": "Steady communication", "body": "Weekly updates, milestone check-ins, and a single source of truth." },
-      { "title": "Respect for your time", "body": "Site visits are purposeful; presentations are concise and actionable." },
-      { "title": "A polished reveal", "body": "White-glove installation and final styling for that “ahh” moment." }
+      {
+        "title": "Decisions made simple",
+        "body": "Clear options with pros/cons, pricing, and visuals—no guesswork."
+      },
+      {
+        "title": "Steady communication",
+        "body": "Weekly updates, milestone check-ins, and a single source of truth."
+      },
+      {
+        "title": "Respect for your time",
+        "body": "Site visits are purposeful; presentations are concise and actionable."
+      },
+      {
+        "title": "A polished reveal",
+        "body": "White-glove installation and final styling for that “ahh” moment."
+      }
     ],
-    "sideImage": { "src": "/images/process/expect.jpg", "alt": "Expectations visual" }
+    "sideImage": {
+      "src": "/images/process/expect.jpg",
+      "alt": "Expectations visual"
+    }
   }
 }
