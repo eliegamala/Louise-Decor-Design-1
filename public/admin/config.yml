@@ -1,6 +1,7 @@
 
 backend:
-  name: git-gateway
+  name: github
+  repo: https://github.com/eliegamala/Louise-Decor-Design-1.git
   branch: main
 
 media_folder: "public/images/uploads"
