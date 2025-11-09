@@ -1,44 +1,8 @@
 {
-  "hero": {
-    "kicker": "Louise Decor & Design",
-    "title": "Timeless spaces, lived-in warmth",
-    "blurb": "Quiet, grounded interiors made for everyday life — balancing circulation, light, and tactile materials.",
-    "image": "/images/uploads/project-3.jpg",
-    "bgClassName": "bg-[#F7F6F3]",
-    "primaryHref": "/portfolio",
-    "primaryLabel": "See our work",
-    "secondaryHref": "/process",
-    "secondaryLabel": "How we work",
-    "highlights": [
-      { "title": "Materials that age well", "text": "Texture & tone over trends." },
-      { "title": "Clarity from day one", "text": "Scope, timeline, and budget mapped clearly." }
-    ]
-  },
-  "testimonialsMeta": { "heading": "Kind words" },
-  "testimonials": [
-    { "src": "/images/uploads/hero-1.jpg", "quote": "Stop your research now. This is the design team to work with." },
-    { "src": "/images/row-2.jpg", "quote": "...they were there for me every step of the way." },
-    { "src": "/images/row-1.jpg", "quote": "My wife and I keep looking for excuses to throw dinner parties." },
-    { "src": "/images/row-2.jpg", "quote": "The whole thing came out better than we could believe." }
-  ],
-  "parallax": {
-    "image": "/images/uploads/louiswall.jpg",
-    "cards": [
-      {
-        "title": "Artfully curated",
-        "text": "We also source and create original art that elevates your space—browse select pieces in our art collection.",
-        "ctaLabel": "Explore art",
-        "href": "/art",
-        "variant": "primary"
-      },
-      {
-        "title": "Portfolio",
-        "text": "Peek into kitchens, living rooms, and whole-home transformations.",
-        "ctaLabel": "See our work",
-        "href": "/portfolio",
-        "variant": "ghost"
-      }
-    ]
+  "servicesMeta": {
+    "heading": "Services at a glance",
+    "ctaLabel": "Start a project",
+    "ctaHref": "/contact"
   },
   "about": {
     "hero": "/images/about-me.jpg",
@@ -60,13 +24,87 @@
     "ctaLabel": "View project",
     "ctaHref": "/portfolio"
   },
-  "services": [
-    { "title": "Full-service design", "body": "Concept through installation for renovations and furnishings." },
-    { "title": "Room refresh", "body": "Focused updates that transform how a space feels and functions." },
-    { "title": "Art curation", "body": "Sourcing and placement tailored to your architecture and story." },
-    { "title": "Trade coordination", "body": "Trusted partners, clear schedules, and tidy job sites." }
+  "testimonials": [
+    {
+      "src": "/images/uploads/hero-1.jpg",
+      "quote": "Stop your research now. This is the design team to work with."
+    },
+    {
+      "src": "/images/row-2.jpg",
+      "quote": "...they were there for me every step of the way."
+    },
+    {
+      "src": "/images/row-1.jpg",
+      "quote": "My wife and I keep looking for excuses to throw dinner parties."
+    },
+    {
+      "src": "/images/row-2.jpg",
+      "quote": "The whole thing came out better than we could believe."
+    }
   ],
-  "servicesMeta": { "heading": "Services at a glance", "ctaLabel": "Start a project", "ctaHref": "/contact" },
-  "servicesImage": { "src": "/images/process-1.jpg", "alt": "Services visual" }
+  "parallax": {
+    "image": "/images/uploads/louiswall.jpg",
+    "cards": [
+      {
+        "title": "Artfully curated",
+        "text": "We also source and create original art that elevates your space—browse select pieces in our art collection.",
+        "ctaLabel": "Explore art",
+        "href": "/art",
+        "variant": "primary"
+      },
+      {
+        "title": "Portfolio",
+        "text": "Peek into kitchens, living rooms, and whole-home transformations.",
+        "ctaLabel": "See our work",
+        "href": "/portfolio",
+        "variant": "ghost"
+      }
+    ]
+  },
+  "testimonialsMeta": {
+    "heading": "Kind words"
+  },
+  "hero": {
+    "secondaryLabel": "How we work",
+    "primaryHref": "/portfolio",
+    "primaryLabel": "See our work",
+    "kicker": "Louise Decor & Design",
+    "title": "Timeless spaces, lived-in warmth",
+    "blurb": "Quiet, grounded interiors made for everyday life — balancing circulation, light, and tactile materials.",
+    "image": "/images/uploads/hero-1.jpg",
+    "bgClassName": "bg-[#F7F6F3]",
+    "highlights": [
+      {
+        "title": "Materials that age well",
+        "text": "Texture & tone over trends."
+      },
+      {
+        "title": "Clarity from day one",
+        "text": "Scope, timeline, and budget mapped clearly."
+      }
+    ],
+    "secondaryHref": "/process"
+  },
+  "servicesImage": {
+    "src": "/images/process-1.jpg",
+    "alt": "Services visual"
+  },
+  "services": [
+    {
+      "title": "Full-service design",
+      "body": "Concept through installation for renovations and furnishings."
+    },
+    {
+      "title": "Room refresh",
+      "body": "Focused updates that transform how a space feels and functions."
+    },
+    {
+      "title": "Art curation",
+      "body": "Sourcing and placement tailored to your architecture and story."
+    },
+    {
+      "title": "Trade coordination",
+      "body": "Trusted partners, clear schedules, and tidy job sites."
+    }
+  ]
 }
-
