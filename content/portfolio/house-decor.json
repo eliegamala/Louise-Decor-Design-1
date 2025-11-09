@@ -1,0 +1,16 @@
+{
+  "id": "house-decor",
+  "title": "house decor",
+  "subtext": "a house",
+  "cover": "/images/uploads/hero-1.jpg",
+  "images": [
+    "/images/uploads/project-3.jpg"
+  ],
+  "meta": [
+    {
+      "key": "house decor",
+      "value": "1"
+    }
+  ],
+  "description": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\""
+}
