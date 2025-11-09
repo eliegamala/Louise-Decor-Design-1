@@ -80,14 +80,38 @@ collections:
                   - { label: Link, name: href, widget: string }
                   - { label: Variant (primary/ghost), name: variant, widget: string, default: ghost }
 
+          # UPDATED: About Me now fully CMS-driven
           - label: About Me
             name: about
             widget: object
             fields:
+              # Images + alts
               - { label: Hero Image, name: hero, widget: image }
-              - { label: Detail Image 1, name: detail1, widget: image }
-              - { label: Detail Image 2, name: detail2, widget: image }
+              - { label: Hero Alt, name: heroAlt, widget: string, required: false }
+              - { label: Detail Image 1, name: detail1, widget: image, required: false }
+              - { label: Detail 1 Alt, name: detail1Alt, widget: string, required: false }
+              - { label: Detail Image 2, name: detail2, widget: image, required: false }
+              - { label: Detail 2 Alt, name: detail2Alt, widget: string, required: false }
               - { label: Headshot (optional), name: headshot, widget: image, required: false }
+              - { label: Headshot Alt, name: headshotAlt, widget: string, required: false }
+
+              # Copy
+              - { label: Heading, name: heading, widget: string, required: false, default: "About me" }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Highlights
+                name: highlights
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+              - { label: Quote, name: quote, widget: string, required: false }
+
+              # Buttons
+              - { label: Primary Label, name: primaryLabel, widget: string, required: false, default: "See my work" }
+              - { label: Primary Link, name: primaryHref, widget: string, required: false, default: "/portfolio" }
+              - { label: Secondary Label, name: secondaryLabel, widget: string, required: false, default: "How I work" }
+              - { label: Secondary Link, name: secondaryHref, widget: string, required: false, default: "/process" }
 
           - label: Featured Project
             name: featured
@@ -183,3 +207,10 @@ collections:
               - { label: Description, name: description, widget: text, required: false }
           - { label: Heading, name: heading, widget: string, required: false }
           - { label: Intro, name: intro, widget: text, required: false }
+          - label: Steps
+            name: steps
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
