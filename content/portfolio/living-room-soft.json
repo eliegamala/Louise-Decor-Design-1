@@ -1,0 +1,10 @@
+{
+  "id": "living-room-soft",
+  "title": "Soft Living Room",
+  "subtext": "Layered textures, muted palette",
+  "cover": "/images/uploads/portfolio-living.jpg",
+  "images": [
+    "/images/uploads/portfolio-living.jpg"
+  ],
+  "ctaHref": "/portfolio"
+}

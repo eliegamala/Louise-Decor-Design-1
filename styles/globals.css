@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 64px;
+}
+
+html, body, #__next {
+  height: 100%;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #2d2a2a;
+}
+
+.container-narrow { @apply max-w-5xl mx-auto px-4; }
+.container-wide { @apply max-w-7xl mx-auto px-4; }
+
+.link-underline { @apply underline underline-offset-4 decoration-1 hover:text-brand-pink; }
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium shadow-soft transition;
+}
+.btn-primary { @apply bg-brand-pink text-white hover:opacity-90; }
+.btn-ghost { @apply bg-white text-brand-dark hover:bg-brand-light; }
+
+.card { @apply bg-white shadow-soft rounded-2xl overflow-hidden; }
+.section { @apply py-16 md:py-24; }
+
+/* Parallax helper */
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

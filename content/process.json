@@ -1,0 +1,25 @@
+{
+  "seo": {
+    "title": "Process",
+    "description": ""
+  },
+  "heading": "Our Process",
+  "intro": "From discovery to install\u2014clear steps, zero chaos.",
+  "steps": [
+    {
+      "title": "Discovery",
+      "body": "We learn your routines, constraints, and goals.",
+      "image": "/images/uploads/step-1.jpg"
+    },
+    {
+      "title": "Design",
+      "body": "Layouts, materials, and lighting come together.",
+      "image": "/images/uploads/step-2.jpg"
+    },
+    {
+      "title": "Delivery",
+      "body": "Procurement, coordination, and install to the last detail.",
+      "image": "/images/uploads/step-3.jpg"
+    }
+  ]
+}

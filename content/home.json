@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "image": "/images/louiswall.jpg",
+    "bgClassName": "bg-[#F7F6F3]",
+    "primaryHref": "/portfolio",
+    "secondaryHref": "/process"
+  },
+  "testimonials": [
+    {
+      "src": "/images/row-1.jpg",
+      "quote": "Stop your research now. This is the design team to work with."
+    },
+    {
+      "src": "/images/row-2.jpg",
+      "quote": "...they were there for me every step of the way."
+    },
+    {
+      "src": "/images/row-1.jpg",
+      "quote": "My wife and I keep looking for excuses to throw dinner parties."
+    },
+    {
+      "src": "/images/row-2.jpg",
+      "quote": "The whole thing came out better than we could believe."
+    }
+  ],
+  "parallax": {
+    "image": "/images/louiswall.jpg",
+    "cards": [
+      {
+        "title": "Artfully curated",
+        "text": "We also source and create original art that elevates your space\u2014browse select pieces in our art collection.",
+        "ctaLabel": "Explore art",
+        "href": "/art",
+        "variant": "primary"
+      },
+      {
+        "title": "Portfolio",
+        "text": "Peek into kitchens, living rooms, and whole-home transformations.",
+        "ctaLabel": "See our work",
+        "href": "/portfolio",
+        "variant": "ghost"
+      }
+    ]
+  },
+  "about": {
+    "hero": "/images/about-me.jpg",
+    "detail1": "/images/about-me.jpg",
+    "detail2": "/images/about-me.jpg",
+    "headshot": "/images/about-me.jpg"
+  },
+  "featured": {
+    "title": "A home that invites gathering",
+    "body": "We layered warm woods, softened transitions, and introduced a lighting plan that moves from morning clarity to evening glow. Personal heirlooms were integrated to keep the story intact.",
+    "mainImage": "/images/featured.jpg",
+    "secondaryImage": "/images/featured-2.jpg",
+    "keyMoves": [
+      "Task/ambient/accent lighting in balance",
+      "Durable finishes with a soft handfeel",
+      "Storage that keeps counters clear"
+    ],
+    "ctaLabel": "View project",
+    "ctaHref": "/portfolio"
+  },
+  "services": [
+    {
+      "title": "Full-service design",
+      "body": "Concept through installation for renovations and furnishings."
+    },
+    {
+      "title": "Room refresh",
+      "body": "Focused updates that transform how a space feels and functions."
+    },
+    {
+      "title": "Art curation",
+      "body": "Sourcing and placement tailored to your architecture and story."
+    },
+    {
+      "title": "Trade coordination",
+      "body": "Trusted partners, clear schedules, and tidy job sites."
+    }
+  ],
+  "servicesImage": {
+    "src": "/images/process-1.jpg",
+    "alt": "Services visual"
+  }
+}

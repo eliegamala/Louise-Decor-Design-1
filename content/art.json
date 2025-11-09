@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "Art",
+    "description": ""
+  },
+  "heading": "Art Collection",
+  "intro": "Selected pieces available on request.",
+  "gallery": [
+    {
+      "src": "/images/uploads/art-1.jpg",
+      "alt": "Art 1"
+    },
+    {
+      "src": "/images/uploads/art-2.jpg",
+      "alt": "Art 2"
+    },
+    {
+      "src": "/images/uploads/art-3.jpg",
+      "alt": "Art 3"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "warm-kitchen",
+  "title": "Warm Kitchen Renovation",
+  "subtext": "Oak, stone, and a generous island",
+  "cover": "/images/uploads/portfolio-kitchen.jpg",
+  "images": [
+    "/images/uploads/portfolio-kitchen.jpg"
+  ],
+  "ctaHref": "/portfolio"
+}
