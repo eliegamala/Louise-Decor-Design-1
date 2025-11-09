@@ -1,27 +1,25 @@
 {
   "hero": {
+    "kicker": "Louise Decor & Design",
+    "title": "Timeless spaces, lived-in warmth",
+    "blurb": "Quiet, grounded interiors made for everyday life — balancing circulation, light, and tactile materials.",
     "image": "/images/uploads/project-3.jpg",
     "bgClassName": "bg-[#F7F6F3]",
     "primaryHref": "/portfolio",
-    "secondaryHref": "/process"
+    "primaryLabel": "See our work",
+    "secondaryHref": "/process",
+    "secondaryLabel": "How we work",
+    "highlights": [
+      { "title": "Materials that age well", "text": "Texture & tone over trends." },
+      { "title": "Clarity from day one", "text": "Scope, timeline, and budget mapped clearly." }
+    ]
   },
+  "testimonialsMeta": { "heading": "Kind words" },
   "testimonials": [
-    {
-      "src": "/images/uploads/hero-1.jpg",
-      "quote": "Stop your research now. This is the design team to work with."
-    },
-    {
-      "src": "/images/row-2.jpg",
-      "quote": "...they were there for me every step of the way."
-    },
-    {
-      "src": "/images/row-1.jpg",
-      "quote": "My wife and I keep looking for excuses to throw dinner parties."
-    },
-    {
-      "src": "/images/row-2.jpg",
-      "quote": "The whole thing came out better than we could believe."
-    }
+    { "src": "/images/uploads/hero-1.jpg", "quote": "Stop your research now. This is the design team to work with." },
+    { "src": "/images/row-2.jpg", "quote": "...they were there for me every step of the way." },
+    { "src": "/images/row-1.jpg", "quote": "My wife and I keep looking for excuses to throw dinner parties." },
+    { "src": "/images/row-2.jpg", "quote": "The whole thing came out better than we could believe." }
   ],
   "parallax": {
     "image": "/images/uploads/louiswall.jpg",
@@ -53,6 +51,7 @@
     "body": "We layered warm woods, softened transitions, and introduced a lighting plan that moves from morning clarity to evening glow. Personal heirlooms were integrated to keep the story intact.",
     "mainImage": "/images/featured.jpg",
     "secondaryImage": "/images/featured-2.jpg",
+    "keyMovesTitle": "Key moves",
     "keyMoves": [
       "Task/ambient/accent lighting in balance",
       "Durable finishes with a soft handfeel",
@@ -62,25 +61,12 @@
     "ctaHref": "/portfolio"
   },
   "services": [
-    {
-      "title": "Full-service design",
-      "body": "Concept through installation for renovations and furnishings."
-    },
-    {
-      "title": "Room refresh",
-      "body": "Focused updates that transform how a space feels and functions."
-    },
-    {
-      "title": "Art curation",
-      "body": "Sourcing and placement tailored to your architecture and story."
-    },
-    {
-      "title": "Trade coordination",
-      "body": "Trusted partners, clear schedules, and tidy job sites."
-    }
+    { "title": "Full-service design", "body": "Concept through installation for renovations and furnishings." },
+    { "title": "Room refresh", "body": "Focused updates that transform how a space feels and functions." },
+    { "title": "Art curation", "body": "Sourcing and placement tailored to your architecture and story." },
+    { "title": "Trade coordination", "body": "Trusted partners, clear schedules, and tidy job sites." }
   ],
-  "servicesImage": {
-    "src": "/images/process-1.jpg",
-    "alt": "Services visual"
-  }
+  "servicesMeta": { "heading": "Services at a glance", "ctaLabel": "Start a project", "ctaHref": "/contact" },
+  "servicesImage": { "src": "/images/process-1.jpg", "alt": "Services visual" }
 }
+
