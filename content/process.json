@@ -1,10 +1,10 @@
 {
   "seo": {
     "title": "Process",
-    "description": ""
+    "description": "From discovery to install—clear steps, zero chaos."
   },
   "heading": "Our Process",
-  "intro": "From discovery to install\u2014clear steps, zero chaos.",
+  "intro": "From discovery to install—clear steps, zero chaos.",
   "steps": [
     {
       "title": "Discovery",
@@ -21,5 +21,36 @@
       "body": "Procurement, coordination, and install to the last detail.",
       "image": "/images/uploads/step-3.jpg"
     }
-  ]
+  ],
+  "overview": {
+    "image": "/images/row-1.jpg",
+    "heading": "From idea to lived-in comfort",
+    "body": "We combine classic design principles with your day-to-day realities—circulation, storage, light, and the tactile details that make a room feel like home.",
+    "highlights": [
+      { "title": "Clarity at each step", "text": "You’ll know what’s next and why it matters." },
+      { "title": "Timeless over trendy", "text": "Materials and forms that age gracefully." }
+    ]
+  },
+  "case": {
+    "mainImage": "/images/featured.jpg",
+    "secondaryImage": "/images/featured-2.jpg",
+    "title": "A kitchen that invites gathering",
+    "body": "In this compact home, we widened the circulation, introduced warm woods, and layered lighting to shift the mood from “task only” to “linger here.” Existing heirloom pieces were integrated to keep the space personal.",
+    "keyMovesTitle": "Key moves",
+    "keyMoves": [
+      "Rebalanced task / ambient / accent lighting",
+      "Durable finishes with soft handfeel",
+      "Storage strategies that keep counters clear"
+    ]
+  },
+  "expect": {
+    "heading": "What to expect",
+    "cards": [
+      { "title": "Decisions made simple", "body": "Clear options with pros/cons, pricing, and visuals—no guesswork." },
+      { "title": "Steady communication", "body": "Weekly updates, milestone check-ins, and a single source of truth." },
+      { "title": "Respect for your time", "body": "Site visits are purposeful; presentations are concise and actionable." },
+      { "title": "A polished reveal", "body": "White-glove installation and final styling for that “ahh” moment." }
+    ],
+    "sideImage": { "src": "/images/process/expect.jpg", "alt": "Expectations visual" }
+  }
 }
