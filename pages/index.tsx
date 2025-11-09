@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ home }: any): JSX.Element {
   return (
     <Layout canonical="/">
-      {/* Hero – all props from CMS */}
+      {/* Hero – all props from CMS yes */}
       <HeroV3
         title={home.hero?.title}
         kicker={home.hero?.kicker}
@@ -99,13 +99,8 @@ export default function Home({ home }: any): JSX.Element {
         </div>
       </Parallax>
 
-      {/* About Me – images only, CMS-controlled */}
-      <AboutMe
-        hero={home.about?.hero}
-        detail1={home.about?.detail1}
-        detail2={home.about?.detail2}
-        headshot={home.about?.headshot}
-      />
+      {/* About Me – now fully CMS-controlled */}
+      <AboutMe {...home.about} />
 
       {/* Featured project – all text/images editable */}
       <section className="section bg-white">
