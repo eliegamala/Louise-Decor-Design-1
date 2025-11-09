@@ -1,0 +1,10 @@
+{
+  "id": "pappap-room-soft",
+  "title": "happy Living Room",
+  "subtext": "Layered bo, muted palette",
+  "cover": "/images/uploads/portfolio-living.jpg",
+  "images": [
+    "/images/uploads/portfolio-living.jpg"
+  ],
+  "ctaHref": "/portfolio"
+}
