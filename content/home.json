@@ -1,6 +1,6 @@
 {
   "hero": {
-    "image": "/images/louiswall.jpg",
+    "image": "/images/uploads/project-3.jpg",
     "bgClassName": "bg-[#F7F6F3]",
     "primaryHref": "/portfolio",
     "secondaryHref": "/process"
@@ -28,7 +28,7 @@
     "cards": [
       {
         "title": "Artfully curated",
-        "text": "We also source and create original art that elevates your space\u2014browse select pieces in our art collection.",
+        "text": "We also source and create original art that elevates your space—browse select pieces in our art collection.",
         "ctaLabel": "Explore art",
         "href": "/art",
         "variant": "primary"
