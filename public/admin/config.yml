@@ -1,7 +1,6 @@
 # Use DecapBridge classic auth (required)
 backend:
   name: git-gateway
-  repo: eliegamala/Louise-Decor-Design-1
   branch: main
   identity_url: https://auth.decapbridge.com/sites/27acc04f-150d-4363-8182-f0171c457056
   gateway_url: https://gateway.decapbridge.com
