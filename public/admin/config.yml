@@ -14,10 +14,7 @@ backend:
     deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
     openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
-# Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
-
-# Add site links in Decap CMS (optional)
 site_url: https://louise-decor-and-design.netlify.app
 
 media_folder: "public/images/uploads"
@@ -37,10 +34,29 @@ collections:
             name: hero
             widget: object
             fields:
+              - { label: Kicker, name: kicker, widget: string, required: false }
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Blurb, name: blurb, widget: text, required: false }
               - { label: Image, name: image, widget: image }
               - { label: Background Class, name: bgClassName, widget: string, required: false }
               - { label: Primary Link, name: primaryHref, widget: string }
+              - { label: Primary Label, name: primaryLabel, widget: string, required: false, default: "See our work" }
               - { label: Secondary Link, name: secondaryHref, widget: string, required: false }
+              - { label: Secondary Label, name: secondaryLabel, widget: string, required: false, default: "How we work" }
+              - label: Highlights
+                name: highlights
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: string }
+
+          - label: Testimonials Settings
+            name: testimonialsMeta
+            widget: object
+            required: false
+            fields:
+              - { label: Heading, name: heading, widget: string, required: false }
 
           - label: Testimonials
             name: testimonials
@@ -81,6 +97,7 @@ collections:
               - { label: Body, name: body, widget: text }
               - { label: Main Image, name: mainImage, widget: image }
               - { label: Secondary Image, name: secondaryImage, widget: image }
+              - { label: Key Moves Label, name: keyMovesTitle, widget: string, required: false, default: "Key moves" }
               - label: Key Moves
                 name: keyMoves
                 widget: list
