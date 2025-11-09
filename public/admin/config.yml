@@ -1,7 +1,6 @@
-
 backend:
   name: github
-  repo: https://github.com/eliegamala/Louise-Decor-Design-1.git
+  repo: eliegamala/Louise-Decor-Design-1
   branch: main
 
 media_folder: "public/images/uploads"
@@ -10,136 +9,129 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 
 collections:
-
-- file: "content/home.json"
-  label: "Home Content"
-  name: "home"
-  fields:
-
-      - label: Hero
-        name: hero
-        widget: object
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Content"
+        name: "home"
+        file: "content/home.json"
         fields:
-          - { label: Image, name: image, widget: image }
-          - { label: Background Class, name: bgClassName, widget: string, required: false }
-          - { label: Primary Link, name: primaryHref, widget: string }
-          - { label: Secondary Link, name: secondaryHref, widget: string, required: false }
-      - label: Testimonials
-        name: testimonials
-        widget: list
-        fields:
-          - { label: Image, name: src, widget: image }
-          - { label: Quote, name: quote, widget: text }
-      - label: Parallax Section
-        name: parallax
-        widget: object
-        fields:
-          - { label: Background Image, name: image, widget: image }
-          - label: Cards
-            name: cards
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Background Class, name: bgClassName, widget: string, required: false }
+              - { label: Primary Link, name: primaryHref, widget: string }
+              - { label: Secondary Link, name: secondaryHref, widget: string, required: false }
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - { label: Image, name: src, widget: image }
+              - { label: Quote, name: quote, widget: text }
+          - label: Parallax Section
+            name: parallax
+            widget: object
+            fields:
+              - { label: Background Image, name: image, widget: image }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: text, widget: text }
+                  - { label: Button Label, name: ctaLabel, widget: string, required: false }
+                  - { label: Link, name: href, widget: string }
+                  - { label: Variant (primary/ghost), name: variant, widget: string, default: ghost }
+          - label: About Me
+            name: about
+            widget: object
+            fields:
+              - { label: Hero Image, name: hero, widget: image }
+              - { label: Detail Image 1, name: detail1, widget: image }
+              - { label: Detail Image 2, name: detail2, widget: image }
+              - { label: Headshot (optional), name: headshot, widget: image, required: false }
+          - label: Featured Project
+            name: featured
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Main Image, name: mainImage, widget: image }
+              - { label: Secondary Image, name: secondaryImage, widget: image }
+              - label: Key Moves
+                name: keyMoves
+                widget: list
+                field: { label: Item, name: item, widget: string }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false, default: "View project" }
+              - { label: CTA Link, name: ctaHref, widget: string }
+          - label: Services
+            name: services
             widget: list
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Body, name: text, widget: text }
-              - { label: Button Label, name: ctaLabel, widget: string, required: false }
-              - { label: Link, name: href, widget: string }
-              - { label: Variant (primary/ghost), name: variant, widget: string, default: ghost }
-      - label: About Me
-        name: about
-        widget: object
+              - { label: Body, name: body, widget: text }
+              - { label: Emphasis (optional), name: emphasis, widget: boolean, required: false }
+          - label: Services Side Image
+            name: servicesImage
+            widget: object
+            fields:
+              - { label: Image, name: src, widget: image }
+              - { label: Alt, name: alt, widget: string }
+
+      - label: "Art"
+        name: "art"
+        file: "content/art.json"
         fields:
-          - { label: Hero Image, name: hero, widget: image }
-          - { label: Detail Image 1, name: detail1, widget: image }
-          - { label: Detail Image 2, name: detail2, widget: image }
-          - { label: Headshot (optional), name: headshot, widget: image, required: false }
-      - label: Featured Project
-        name: featured
-        widget: object
+          - label: SEO
+            name: seo
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Intro, name: intro, widget: text, required: false }
+
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.json"
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: text }
-          - { label: Main Image, name: mainImage, widget: image }
-          - { label: Secondary Image, name: secondaryImage, widget: image }
-          - label: Key Moves
-            name: keyMoves
-            widget: list
-            field: { label: Item, name: item, widget: string }
-          - { label: CTA Label, name: ctaLabel, widget: string, required: false, default: "View project" }
-          - { label: CTA Link, name: ctaHref, widget: string }
-      - label: Services
-        name: services
-        widget: list
+          - label: SEO
+            name: seo
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Intro, name: intro, widget: text, required: false }
+
+      - label: "Portfolio"
+        name: "portfolio"
+        file: "content/portfolio.json"
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: text }
-          - { label: Emphasis (optional), name: emphasis, widget: boolean, required: false }
-      - label: Services Side Image
-        name: servicesImage
-        widget: object
+          - label: SEO
+            name: seo
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Intro, name: intro, widget: text, required: false }
+
+      - label: "Process"
+        name: "process"
+        file: "content/process.json"
         fields:
-          - { label: Image, name: src, widget: image }
-          - { label: Alt, name: alt, widget: string }
-
-
-- file: "content/art.json"
-  label: "Art"
-  name: "art"
-  fields:
-
-      - label: SEO
-        name: seo
-        widget: object
-        required: false
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - { label: Description, name: description, widget: text, required: false }
-      - { label: Heading, name: heading, widget: string, required: false }
-      - { label: Intro, name: intro, widget: text, required: false }
-
-
-- file: "content/contact.json"
-  label: "Contact"
-  name: "contact"
-  fields:
-
-      - label: SEO
-        name: seo
-        widget: object
-        required: false
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - { label: Description, name: description, widget: text, required: false }
-      - { label: Heading, name: heading, widget: string, required: false }
-      - { label: Intro, name: intro, widget: text, required: false }
-
-
-- file: "content/portfolio.json"
-  label: "Portfolio"
-  name: "portfolio"
-  fields:
-
-      - label: SEO
-        name: seo
-        widget: object
-        required: false
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - { label: Description, name: description, widget: text, required: false }
-      - { label: Heading, name: heading, widget: string, required: false }
-      - { label: Intro, name: intro, widget: text, required: false }
-
-
-- file: "content/process.json"
-  label: "Process"
-  name: "process"
-  fields:
-
-      - label: SEO
-        name: seo
-        widget: object
-        required: false
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - { label: Description, name: description, widget: text, required: false }
-      - { label: Heading, name: heading, widget: string, required: false }
-      - { label: Intro, name: intro, widget: text, required: false }
+          - label: SEO
+            name: seo
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Intro, name: intro, widget: text, required: false }
