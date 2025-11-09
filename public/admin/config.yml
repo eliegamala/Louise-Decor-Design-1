@@ -215,33 +215,32 @@ collections:
               - { label: Body, name: body, widget: text }
               - { label: Image, name: image, widget: image, required: false }
 
-# Add this new collection (sibling to "Pages")
-- label: "Projects"
-  name: "projects"
-  folder: "content/portfolio"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  identifier_field: id
-  filter:
-    field: __is_page_shell
-    value: false
-  fields:
-    - { label: ID (slug), name: id, widget: string, hint: "Unique ID used in URLs and keys." }
-    - { label: Title, name: title, widget: string }
-    - { label: Subtext, name: subtext, widget: string, required: false }
-    - { label: Cover Image, name: cover, widget: image }
-    - label: Images
-      name: images
-      widget: list
-      required: false
-      field: { label: Image, name: image, widget: image }
-    - { label: Description, name: description, widget: text, required: false }
-    - label: Meta
-      name: meta
-      widget: list
-      required: false
-      fields:
-        - { label: Label, name: key, widget: string }
-        - { label: Value, name: value, widget: string }
-
+  # ✅ Correctly nested inside the collections list
+  - label: "Projects"
+    name: "projects"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    identifier_field: id
+    filter:
+      field: __is_page_shell
+      value: false
+    fields:
+      - { label: ID (slug), name: id, widget: string, hint: "Unique ID used in URLs and keys." }
+      - { label: Title, name: title, widget: string }
+      - { label: Subtext, name: subtext, widget: string, required: false }
+      - { label: Cover Image, name: cover, widget: image }
+      - label: Images
+        name: images
+        widget: list
+        required: false
+        field: { label: Image, name: image, widget: image }
+      - { label: Description, name: description, widget: text, required: false }
+      - label: Meta
+        name: meta
+        widget: list
+        required: false
+        fields:
+          - { label: Label, name: key, widget: string }
+          - { label: Value, name: value, widget: string }
