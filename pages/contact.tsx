@@ -14,9 +14,6 @@ export default function ContactPage({ page }: any) {
       <CMSHeader data={page} />
       <section className="section">
         <div className="container-narrow">
-          <h1 className="font-display text-3xl mb-6">
-            {page?.heading ?? 'Contact our team'}
-          </h1>
           <p className="text-neutral-600 mb-8">{page?.intro ?? ' '}</p>
           <form
             className="card p-6 grid gap-4"
