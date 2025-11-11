@@ -44,6 +44,7 @@ export default function ContactPage({ page }: any) {
                 target="hidden_iframe"
                 className="card p-6 grid gap-4"
               >
+                {/* Netlify form identification */}
                 <input type="hidden" name="form-name" value="contact" />
 
                 <label className="grid gap-2">
@@ -56,7 +57,7 @@ export default function ContactPage({ page }: any) {
                 </label>
 
                 <label className="grid gap-2">
-                  <span className="text-sm">Email address</span>
+                  <span className="text-sm">Email</span>
                   <input
                     name="email"
                     type="email"
@@ -66,7 +67,7 @@ export default function ContactPage({ page }: any) {
                 </label>
 
                 <label className="grid gap-2">
-                  <span className="text-sm">Message (optional)</span>
+                  <span className="text-sm">Message</span>
                   <textarea
                     name="message"
                     rows={5}
@@ -75,7 +76,7 @@ export default function ContactPage({ page }: any) {
                 </label>
 
                 <button type="submit" className="btn btn-primary">
-                  Submit
+                  Send
                 </button>
               </form>
             </>
