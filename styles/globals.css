@@ -35,3 +35,8 @@ html, body, #__next {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Remove or reduce top padding specifically for the contact form section */
+.section-contact-form {
+  padding-top: 0; /* Or a smaller value like 1rem if you want a tiny bit of space */
+}
