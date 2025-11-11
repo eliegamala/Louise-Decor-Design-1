@@ -28,8 +28,9 @@ export default function ContactPage({ page }: any) {
         {/* Add title and meta tags as needed */}
         <title>{page?.title || 'Contact'} - Your Site Name</title>
       </Head>
-      <CMSHeader data={page}  className="mb-4"/>
-      <section className="section">
+      <CMSHeader data={page} />
+      {/* Add a custom class to reduce top padding on this specific section */}
+      <section className="section section-contact-form">
         <div className="container-narrow">
           <p className="text-neutral-600 mb-8">{page?.intro ?? ' '}</p>
 
