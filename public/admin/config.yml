@@ -163,8 +163,32 @@ collections:
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Description, name: description, widget: text, required: false }
+
           - { label: Heading, name: heading, widget: string, required: false }
           - { label: Intro, name: intro, widget: text, required: false }
+
+          # NEW: Art pieces (upload artworks here)
+          - label: Pieces
+            name: pieces
+            widget: list
+            required: false
+            fields:
+              - { label: ID, name: id, widget: string, hint: "Any unique value (e.g. a slug or number)." }
+              - { label: Image, name: src, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Medium, name: medium, widget: string, required: false }
+              - { label: Size, name: size, widget: string, required: false }
+              - { label: Year, name: year, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+
+          # Optional mood/room gallery
+          - label: Gallery
+            name: gallery
+            widget: list
+            required: false
+            fields:
+              - { label: Image, name: src, widget: image }
+              - { label: Alt Text, name: alt, widget: string, required: false }
 
       - label: "Contact"
         name: "contact"
