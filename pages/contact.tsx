@@ -11,6 +11,33 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function ContactPage({ page }: any) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    // Netlify requires form-name in the payload
+    if (!data.get('form-name')) data.set('form-name', 'contact');
+
+    try {
+      await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as any).toString(),
+      });
+      setSubmitted(true);
+      form.reset();
+    } catch (err: any) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
     <Layout>
@@ -25,61 +52,37 @@ export default function ContactPage({ page }: any) {
               <p>Your message has been sent. We’ll get back to you shortly.</p>
             </div>
           ) : (
-            <>
-              {/* Hidden iframe for Netlify form submission */}
-              <iframe
-                name="hidden_iframe"
-                style={{ display: 'none' }}
-                onLoad={() => {
-                  if (submitted) return;
-                  setSubmitted(true);
-                }}
-              ></iframe>
+            <form
+              name="contact"
+              onSubmit={handleSubmit}
+              className="card p-6 grid gap-4"
+              // NOTE: no data-netlify attribute here anymore
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              {/* honeypot for spam */}
+              <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
 
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                action="/"
-                target="hidden_iframe"
-                className="card p-6 grid gap-4"
-              >
-                {/* Netlify form identification */}
-                <input type="hidden" name="form-name" value="contact" />
+              <label className="grid gap-2">
+                <span className="text-sm">Name</span>
+                <input name="name" required className="rounded-xl border px-3 py-3" />
+              </label>
 
-                <label className="grid gap-2">
-                  <span className="text-sm">Name</span>
-                  <input
-                    name="name"
-                    required
-                    className="rounded-xl border px-3 py-3"
-                  />
-                </label>
+              <label className="grid gap-2">
+                <span className="text-sm">Email address</span>
+                <input name="email" type="email" required className="rounded-xl border px-3 py-3" />
+              </label>
 
-                <label className="grid gap-2">
-                  <span className="text-sm">Email</span>
-                  <input
-                    name="email"
-                    type="email"
-                    required
-                    className="rounded-xl border px-3 py-3"
-                  />
-                </label>
+              <label className="grid gap-2">
+                <span className="text-sm">Message (optional)</span>
+                <textarea name="message" rows={5} className="rounded-xl border px-3 py-3" />
+              </label>
 
-                <label className="grid gap-2">
-                  <span className="text-sm">Message</span>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    className="rounded-xl border px-3 py-3"
-                  />
-                </label>
+              {error && <p className="text-red-600 text-sm">{error}</p>}
 
-                <button type="submit" className="btn btn-primary">
-                  Send
-                </button>
-              </form>
-            </>
+              <button type="submit" className="btn btn-primary" disabled={submitting}>
+                {submitting ? 'Submitting…' : 'Submit'}
+              </button>
+            </form>
           )}
         </div>
       </section>
