@@ -205,15 +205,75 @@ collections:
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Description, name: description, widget: text, required: false }
+
           - { label: Heading, name: heading, widget: string, required: false }
           - { label: Intro, name: intro, widget: text, required: false }
+
+          # Steps (title, body, optional image)
           - label: Steps
             name: steps
             widget: list
+            required: false
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Body, name: body, widget: text }
               - { label: Image, name: image, widget: image, required: false }
+
+          # Overview (image + copy + highlights)
+          - label: Overview
+            name: overview
+            widget: object
+            required: false
+            fields:
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Heading, name: heading, widget: string, required: false }
+              - { label: Body, name: body, widget: text, required: false }
+              - label: Highlights
+                name: highlights
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+
+          # Case study (images + narrative + key moves)
+          - label: Case Study
+            name: case
+            widget: object
+            required: false
+            fields:
+              - { label: Main Image, name: mainImage, widget: image, required: false }
+              - { label: Secondary Image, name: secondaryImage, widget: image, required: false }
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Body, name: body, widget: text, required: false }
+              - { label: Key Moves Label, name: keyMovesTitle, widget: string, required: false, default: "Key moves" }
+              - label: Key Moves
+                name: keyMoves
+                widget: list
+                required: false
+                field: { label: Item, name: item, widget: string }
+
+          # What to expect (cards + side image)
+          - label: What to Expect
+            name: expect
+            widget: object
+            required: false
+            fields:
+              - { label: Heading, name: heading, widget: string, required: false }
+              - label: Cards
+                name: cards
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+              - label: Side Image
+                name: sideImage
+                widget: object
+                required: false
+                fields:
+                  - { label: Image, name: src, widget: image }
+                  - { label: Alt Text, name: alt, widget: string, required: false }
 
   - label: "Projects"
     name: "projects"
