@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { loadJSON } from '@/lib/content';
 import CMSHeader from '@/components/CMSHeader';
 import Layout from '@/components/Layout';
+import Head from 'next/head'; // Added Head for SEO
 import type { GetStaticProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -10,43 +11,29 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function ContactPage({ page }: any) {
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitting(true);
-    setError(null);
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    // Netlify requires form-name in the payload
-    if (!data.get('form-name')) data.set('form-name', 'contact');
-
-    try {
-      await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as any).toString(),
-      });
-      setSubmitted(true);
-      form.reset();
-    } catch (err: any) {
-      setError('Something went wrong. Please try again.');
-    } finally {
-      setSubmitting(false);
+  useEffect(() => {
+    // Check for success parameter in URL on component mount
+    if (window.location.search.includes('success=true')) {
+      setSuccess(true);
+      // Optional: Clear the URL parameter without reloading the page
+      // window.history.replaceState({}, document.title, window.location.pathname);
     }
-  }
+  }, []);
 
   return (
     <Layout>
+      <Head>
+        {/* Add title and meta tags as needed */}
+        <title>{page?.title || 'Contact'} - Your Site Name</title>
+      </Head>
       <CMSHeader data={page} />
       <section className="section">
         <div className="container-narrow">
           <p className="text-neutral-600 mb-8">{page?.intro ?? ' '}</p>
 
-          {submitted ? (
+          {success ? (
             <div className="card p-6 text-center">
               <h2 className="text-2xl font-semibold mb-4">Thank you!</h2>
               <p>Your message has been sent. We’ll get back to you shortly.</p>
@@ -54,9 +41,10 @@ export default function ContactPage({ page }: any) {
           ) : (
             <form
               name="contact"
-              onSubmit={handleSubmit}
+              method="POST"
+              action="/contact?success=true" // Updated action path to match the page URL
+              data-netlify="true"
               className="card p-6 grid gap-4"
-              // NOTE: no data-netlify attribute here anymore
             >
               <input type="hidden" name="form-name" value="contact" />
               {/* honeypot for spam */}
@@ -77,10 +65,10 @@ export default function ContactPage({ page }: any) {
                 <textarea name="message" rows={5} className="rounded-xl border px-3 py-3" />
               </label>
 
-              {error && <p className="text-red-600 text-sm">{error}</p>}
+              {/* Removed error state handling as Netlify handles errors differently */}
 
-              <button type="submit" className="btn btn-primary" disabled={submitting}>
-                {submitting ? 'Submitting…' : 'Submit'}
+              <button type="submit" className="btn btn-primary">
+                Submit
               </button>
             </form>
           )}
