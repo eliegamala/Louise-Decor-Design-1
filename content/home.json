@@ -32,7 +32,7 @@
     "secondaryHref": "/process"
   },
   "featured": {
-    "title": "A home that invites gathering",
+    "title": "A home that invites gathering favourite project",
     "body": "We layered warm woods, softened transitions, and introduced a lighting plan that moves from morning clarity to evening glow. Personal heirlooms were integrated to keep the story intact.",
     "mainImage": "/images/featured.jpg",
     "secondaryImage": "/images/featured-2.jpg",
@@ -93,7 +93,7 @@
     "title": "Timeless spaces, lived-in warmth",
     "blurb": "Quiet, grounded interiors made for everyday life — balancing circulation, light, and tactile materials.",
     "image": "/images/uploads/project-3.jpg",
-    "bgClassName": "#FAF7F7",
+    "bgClassName": "",
     "highlights": [
       {
         "title": "Materials that age well",
