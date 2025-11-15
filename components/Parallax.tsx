@@ -43,7 +43,7 @@ export default function Parallax({
   image: string
   children?: React.ReactNode
 }) {
-  const { ref, offset } = useParallax(0.25) // tweak speed to taste
+  const { ref, offset } = useParallax(0.55) // tweak speed to taste
 
   return (
     <section className="section relative overflow-hidden">
