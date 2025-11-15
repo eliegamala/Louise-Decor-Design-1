@@ -11,14 +11,14 @@
     "heading": "About me",
     "detail2Alt": "Light and texture study",
     "detail1Alt": "Material palette",
-    "intro": "I design calm, grounded spaces with lived-in warmth—balancing circulation, light, and tactile materials so your home welcomes you at every turn.",
+    "intro": "My journey in the interior design industry began 18 years ago. Through trial and error in clothing design and stage makeup studies, I discovered my career purpose as a tactile individual, deeply engaged by all four senses. This path led me through furniture manufacturing, design, and product development, ultimately bringing me back to my true passion: crafting beautiful, comforting spaces rooted in timeless design principles.\n\nDuring childhood, I was surrounded by inspiring women in a nostalgic home life where the kitchen and food were always central to expressing love. My grandmother's home left the imprint of candlelight, shiny floors, comfy beds, a wood-burning stove, and coffee brewing aromas at 5 a.m. My grandfather's garden was filled with show dahlias, roses, fruit trees, and herbs. Consequently, the sensations of smell, touch, and warm embraces formed the foundation of my career and life.\n\n",
     "primaryHref": "/portfolio",
     "headshotAlt": "Designer headshot",
     "heroAlt": "Studio atmosphere",
     "primaryLabel": "See my work",
     "headshot": "/images/about-me.jpg",
     "hero": "/images/about-me.jpg",
-    "quote": "Home should feel like an exhale.",
+    "quote": "When you step into your home, it should envelop you in that same comforting embrace.",
     "highlights": [
       {
         "title": "Timeless over trendy",
@@ -68,7 +68,7 @@
     "cards": [
       {
         "title": "Artfully curated",
-        "text": "We also source and create original art that elevates your space—browse select pieces in our art collection.",
+        "text": "We collaborate with talented artists from the local community and surrounding areas, sourcing and creating original pieces that elevate your space. Explore our carefully selected art collection.",
         "ctaLabel": "Explore art",
         "href": "/art",
         "variant": "primary"
