@@ -39,6 +39,16 @@ export default function Layout({ title='Decor and Design Services | Interior Des
             "telephone": "+27 72 390 9235"
           })
         }} />
+
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WSQ1CJVDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9WSQ1CJVDV');
+</script>
       </Head>
       <Header />
       <main>{children}</main>
