@@ -1,69 +1,49 @@
-'use client'
-
-import React from 'react'
-
-function useParallax(speed = 0.15) {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const [offset, setOffset] = React.useState(0)
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (!ref.current) return
-
-      const rect = ref.current.getBoundingClientRect()
-
-      // Simple, natural parallax: move relative to distance from top
-      // Small speed so it feels subtle & not "closing"
-      setOffset(rect.top * speed)
-    }
-
-    handleScroll() // run once on mount
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    window.addEventListener('resize', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleScroll)
-    }
-  }, [speed])
-
-  return { ref, offset }
-}
+import { useEffect, useRef } from "react";
 
 export default function Parallax({
   image,
   children,
 }: {
-  image: string
-  children?: React.ReactNode
+  image: string;
+  children?: React.ReactNode;
 }) {
-  const { ref, offset } = useParallax(0.50) // tweak between 0.1–0.25 if needed
+  const parallaxRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = parallaxRef.current;
+    if (!el) return;
+
+    const speed = 0.3; // tweak for more/less parallax
+
+    const handleScroll = () => {
+      const rect = el.getBoundingClientRect();
+      // move background slower than scroll
+      const offset = rect.top * speed;
+      el.style.transform = `translate3d(0, ${-offset}px, 0)`;
+    };
+
+    handleScroll(); // set initial position
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   return (
     <section className="section relative overflow-hidden">
       <div
-        ref={ref}
-        className="relative w-full h-[360px] sm:h-[400px] md:h-[500px] overflow-hidden"
-      >
-        <div
-          className="
-            absolute inset-0
-            bg-cover bg-center bg-no-repeat
-            will-change-transform
-          "
-          style={{
-            backgroundImage: `url(${image})`,
-            transform: `translateY(${offset}px)`,
-          }}
-        />
-      </div>
-
+        ref={parallaxRef}
+        className="parallax w-full h-[360px] sm:h-[400px] md:h-[500px] bg-cover bg-center bg-no-repeat will-change-transform"
+        style={{ backgroundImage: `url(${image})` }}
+      />
       {children && (
         <div className="container-narrow mt-8 px-4 mx-auto">
           {children}
         </div>
       )}
     </section>
-  )
+  );
 }
