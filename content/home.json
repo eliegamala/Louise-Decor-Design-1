@@ -11,7 +11,7 @@
     "heading": "About me",
     "detail2Alt": "Light and texture study",
     "detail1Alt": "Material palette",
-    "intro": "My journey in the interior design industry began 18 years ago. Through trial and error in clothing design and stage makeup studies, I discovered my career purpose as a tactile individual, deeply engaged by all four senses. This path led me through furniture manufacturing, design, and product development, ultimately bringing me back to my true passion: crafting beautiful, comforting spaces rooted in timeless design principles.\n\nDuring childhood, I was surrounded by inspiring women in a nostalgic home life where the kitchen and food were always central to expressing love. My grandmother's home left the imprint of candlelight, shiny floors, comfy beds, a wood-burning stove, and coffee brewing aromas at 5 a.m. My grandfather's garden was filled with show dahlias, roses, fruit trees, and herbs. Consequently, the sensations of smell, touch, and warm embraces formed the foundation of my career and life.\n\n",
+    "intro": "My journey in the interior design industry began 18 years ago. Through trial and error in clothing design and stage makeup studies, I discovered my career purpose as a tactile individual, deeply engaged by all four senses. This path led me through furniture manufacturing, design, and product development, ultimately bringing me back to my true passion: crafting beautiful, comforting spaces rooted in timeless design principles.\n\n\nDuring childhood, I was surrounded by inspiring women in a nostalgic home life where the kitchen and food were always central to expressing love. My grandmother's home left the imprint of candlelight, shiny floors, comfy beds, a wood-burning stove, and coffee brewing aromas at 5 a.m. My grandfather's garden was filled with show dahlias, roses, fruit trees, and herbs. Consequently, the sensations of smell, touch, and warm embraces formed the foundation of my career and life.\n\n",
     "primaryHref": "/portfolio",
     "headshotAlt": "Designer headshot",
     "heroAlt": "Studio atmosphere",
@@ -113,7 +113,7 @@
   "services": [
     {
       "title": "Full-service design",
-      "body": "Concept through installation for renovations and furnishings."
+      "body": "From concept to installation, we handle renovations, furnishings, and complete interior transformations."
     },
     {
       "title": "Room refresh",
@@ -124,8 +124,20 @@
       "body": "Sourcing and placement tailored to your architecture and story."
     },
     {
-      "title": "Trade coordination",
-      "body": "Trusted partners, clear schedules, and tidy job sites."
+      "title": "Custom Sofas & Furniture Design",
+      "body": "Bespoke furniture crafted to suit your space, style, and needs."
+    },
+    {
+      "title": "Airbnb Styling",
+      "body": "Design solutions that make short-term rentals inviting, functional, and guest-ready."
+    },
+    {
+      "title": "Hospitality Interiors",
+      "body": "Thoughtful design for hotels, restaurants, and commercial spaces that leaves a lasting impression."
+    },
+    {
+      "title": "Upholstery Services",
+      "body": "Custom curtains, blinds, and soft furnishings tailored to your home or project."
     }
   ]
 }
