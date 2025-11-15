@@ -7,6 +7,10 @@
   "intro": "From discovery to install—clear steps, zero chaos.",
   "steps": [
     {
+      "title": "Introduction Consultation",
+      "body": "In-person or via phone call, we get to know your needs, routines, and goals."
+    },
+    {
       "title": "Discovery",
       "body": "We learn your routines, constraints, and goals.",
       "image": ""
@@ -20,10 +24,6 @@
       "title": "Delivery",
       "body": "Procurement, coordination, and install to the last detail.",
       "image": ""
-    },
-    {
-      "title": "final",
-      "body": "lorem ipsum "
     }
   ],
   "overview": {
