@@ -11,8 +11,7 @@ type Props = {
   canonical?: string;
 }
 
-export default function Layout({ title='Decor and Design Services | Interior Design in Cape Town
-', description='Discover expert decor and design services in Cape Town. We offer personalized interior design solutions to transform your space beautifully.', children, image='/images/og.jpg', canonical='/' }: Props){
+export default function Layout({ title='Decor and Design Services | Interior Design in Cape Town', description='Discover expert decor and design services in Cape Town. We offer personalized interior design solutions to transform your space beautifully.', children, image='/images/og.jpg', canonical='/' }: Props): JSX.Element {
   const siteName = 'Louise Decor and Design';
   const url = `https://example.com${canonical}`;
   return (
@@ -32,23 +31,24 @@ export default function Layout({ title='Decor and Design Services | Interior Des
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": siteName,
+            "name": Louise Decor and design,
             "image": image,
-            "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA" },
-            "url": url,
+            "address": { "@type": "PostalAddress", "addressLocality": "Cape Town", "addressRegion": "Western Cape" },
+            "url": https://louise-decor-and-design.netlify.app/,
             "telephone": "+27 72 390 9235"
           })
         }} />
 
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WSQ1CJVDV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9WSQ1CJVDV');
-</script>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WSQ1CJVDV"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9WSQ1CJVDV');
+          `}
+        </script>
       </Head>
       <Header />
       <main>{children}</main>
