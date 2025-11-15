@@ -11,7 +11,8 @@ type Props = {
   canonical?: string;
 }
 
-export default function Layout({ title='louise decor and design – We make homes look beautiful.', description='Interior design studio in San Francisco crafting spaces that feel effortless and refined.', children, image='/images/og.jpg', canonical='/' }: Props){
+export default function Layout({ title='Decor and Design Services | Interior Design in Cape Town
+', description='Discover expert decor and design services in Cape Town. We offer personalized interior design solutions to transform your space beautifully.', children, image='/images/og.jpg', canonical='/' }: Props){
   const siteName = 'Louise Decor and Design';
   const url = `https://example.com${canonical}`;
   return (
@@ -35,7 +36,7 @@ export default function Layout({ title='louise decor and design – We make home
             "image": image,
             "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA" },
             "url": url,
-            "telephone": "(415) 555-1200"
+            "telephone": "+27 72 390 9235"
           })
         }} />
       </Head>
