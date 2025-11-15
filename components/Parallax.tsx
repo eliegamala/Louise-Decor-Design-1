@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-function useParallax(speed = 0.3) {
+function useParallax(speed = 0.15) {
   const ref = React.useRef<HTMLDivElement | null>(null)
   const [offset, setOffset] = React.useState(0)
 
@@ -11,15 +11,10 @@ function useParallax(speed = 0.3) {
       if (!ref.current) return
 
       const rect = ref.current.getBoundingClientRect()
-      const windowHeight = window.innerHeight
 
-      // Distance of element's center from the center of the viewport
-      const elementCenter = rect.top + rect.height / 2
-      const screenCenter = windowHeight / 2
-      const distanceFromCenter = elementCenter - screenCenter
-
-      // Negative so background moves opposite to scroll for parallax feel
-      setOffset(-distanceFromCenter * speed)
+      // Simple, natural parallax: move relative to distance from top
+      // Small speed so it feels subtle & not "closing"
+      setOffset(rect.top * speed)
     }
 
     handleScroll() // run once on mount
@@ -43,7 +38,7 @@ export default function Parallax({
   image: string
   children?: React.ReactNode
 }) {
-  const { ref, offset } = useParallax(0.80) // tweak speed to taste
+  const { ref, offset } = useParallax(0.15) // tweak between 0.1–0.25 if needed
 
   return (
     <section className="section relative overflow-hidden">
