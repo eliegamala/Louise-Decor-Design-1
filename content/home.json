@@ -113,7 +113,7 @@
   "services": [
     {
       "title": "Full-service design",
-      "body": "Concept through installation for renovations and furnishings."
+      "body": "From concept to installation, we handle renovations, furnishings, and complete interior transformations."
     },
     {
       "title": "Room refresh",
@@ -124,8 +124,20 @@
       "body": "Sourcing and placement tailored to your architecture and story."
     },
     {
-      "title": "Trade coordination",
-      "body": "Trusted partners, clear schedules, and tidy job sites."
+      "title": "Custom Sofas & Furniture Design",
+      "body": "Bespoke furniture crafted to suit your space, style, and needs."
+    },
+    {
+      "title": "Airbnb Styling",
+      "body": "Design solutions that make short-term rentals inviting, functional, and guest-ready."
+    },
+    {
+      "title": "Hospitality Interiors",
+      "body": "Thoughtful design for hotels, restaurants, and commercial spaces that leaves a lasting impression."
+    },
+    {
+      "title": "Upholstery Services",
+      "body": "Custom curtains, blinds, and soft furnishings tailored to your home or project."
     }
   ]
 }
