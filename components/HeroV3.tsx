@@ -51,7 +51,10 @@ export default function HeroV3({
         ];
 
   return (
-    <section className={clsx("relative", _bg)}>
+      <section
+      className="relative"
+      style={{ backgroundColor: "#FAF7F7" }} // forced background
+    >
       <div className="container-wide py-10 md:py-14">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           {/* Copy */}
