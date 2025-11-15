@@ -2,8 +2,12 @@ export default function Parallax({ image, children }: { image: string, children?
   return (
     <section className="section relative overflow-hidden">
       <div 
-        className="parallax w-full h-[360px] sm:h-[400px] md:h-[500px] bg-fixed bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${image})` }}
+        className="w-full bg-cover bg-center bg-no-repeat md:bg-fixed"
+        style={{ 
+          backgroundImage: `url(${image})`,
+          height: '360px',
+          backgroundAttachment: window.innerWidth >= 768 ? 'fixed' : 'scroll'
+        }}
       />
       {children && (
         <div className="container-narrow mt-8 px-4 mx-auto">
