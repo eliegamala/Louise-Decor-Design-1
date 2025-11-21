@@ -1,8 +1,13 @@
 {
   "seo": {
     "title": "Contact",
-    "description": ""
+    "description": "Get in touch with Louise Decor & Design or visit our store in Observatory, Cape Town."
   },
   "heading": "Contact",
-  "intro": ""
+  "intro": "We’d love to hear from you. Send us a message or visit us in-store.",
+  "storeName": "Louise Decor & Design",
+  "address": "62 Lower Main Rd, Observatory, Cape Town, 7925",
+  "email": "lv.decordesign@gmail.com"
+  "phone": "+27 72 390 9235",
+  "whatsappNumber": "27723909235"
 }
