@@ -45,6 +45,10 @@
     "ctaLabel": "View project",
     "ctaHref": "/portfolio"
   },
+  "shoppe": {
+  "image": "/images/shop-front.jpg",
+  "imageAlt": "Louise Decor & Design boutique in Observatory, Cape Town"
+},
   "testimonials": [
     {
       "src": "/images/uploads/hero-1.jpg",
