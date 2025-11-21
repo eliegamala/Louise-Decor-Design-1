@@ -131,6 +131,40 @@ export default function Home({ home }: any): JSX.Element {
         </div>
       </section>
 
+            {/* NEW: Shoppe Louise Decor & Design section */}
+      <section className="section bg-neutral-50">
+        <div className="container-wide grid lg:grid-cols-2 gap-8 items-center">
+          {/* Shop image */}
+          {home.shoppe?.image && (
+            <Img
+              src={home.shoppe.image}
+              alt={home.shoppe?.imageAlt ?? 'Louise Decor & Design storefront'}
+              ratio="aspect-[4/3]"
+              className="max-w-xl mx-auto"
+            />
+          )}
+
+          {/* Text content */}
+          <div className="text-center lg:text-left">
+            <h2 className="font-display text-3xl md:text-4xl mb-4">
+              Shoppe Louise Decor &amp; Design
+            </h2>
+            <p className="text-neutral-700 max-w-xl">
+              Our boutique store is nestled in Observatory – affectionately known as the bohemian
+              capital of Cape Town, where creativity and diversity are always in full bloom.
+            </p>
+            <p className="text-neutral-700 max-w-xl mt-3">
+              Step inside for an artfully curated experience where décor, colour and texture come
+              together to inspire your home.
+            </p>
+            <Link href="/contact" className="btn btn-primary mt-6">
+              Visit our store in Obs
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
       {/* Services – heading + CTA + cards all editable */}
       <section className="section bg-white">
         <div className="container-wide grid md:grid-cols-3 gap-8 items-start">
