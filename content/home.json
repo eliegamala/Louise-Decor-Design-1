@@ -51,7 +51,7 @@
 },
   "testimonials": [
     {
-      "src": "/images/uploads/hero-1.jpg",
+      "src": "public/images/shop-front.webp",
       "quote": "Stop your research now. This is the design team to work with."
     },
     {
