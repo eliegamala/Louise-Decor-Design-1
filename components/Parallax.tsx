@@ -1,8 +1,19 @@
-export default function Parallax({ image, children }: { image: string, children?: React.ReactNode }) {
+export default function Parallax({
+  image,
+  children,
+}: {
+  image: string;
+  children?: React.ReactNode;
+}) {
   return (
-    <section className="section relative overflow-hidden">
+    <section className="section relative">
       <div
-        className="parallax w-full h-[360px] sm:h-[400px] md:h-[500px] bg-cover bg-center bg-no-repeat md:bg-fixed"
+        className="
+          w-full
+          h-[320px] sm:h-[380px] md:h-[460px]
+          bg-cover bg-center bg-no-repeat
+          lg:bg-fixed
+        "
         style={{ backgroundImage: `url(${image})` }}
       />
       {children && (
@@ -11,5 +22,5 @@ export default function Parallax({ image, children }: { image: string, children?
         </div>
       )}
     </section>
-  )
+  );
 }
