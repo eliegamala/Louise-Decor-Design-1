@@ -4,6 +4,10 @@
     "ctaLabel": "Start a project",
     "ctaHref": "/contact"
   },
+  "shoppe": {
+    "image": "/images/shop-front.webp",
+    "imageAlt": "Louise Decor & Design boutique in Observatory, Cape Town"
+  },
   "about": {
     "secondaryLabel": "How I work",
     "detail1": "/images/about-me.jpg",
@@ -45,10 +49,6 @@
     "ctaLabel": "View project",
     "ctaHref": "/portfolio"
   },
-  "shoppe": {
-  "image": "/images/shop-front.webp",
-  "imageAlt": "Louise Decor & Design boutique in Observatory, Cape Town"
-},
   "testimonials": [
     {
       "src": "public/images/shop-front.webp",
@@ -96,7 +96,7 @@
     "kicker": "Louise Decor & Design",
     "title": "Interiors by Louise Decor & Design",
     "blurb": "Louise Decor & Design creates quiet, grounded interiors for everyday life, balancing light, flow, and textures to craft beautiful, functional spaces.",
-    "image": "/images/uploads/project-3.jpg",
+    "image": "/images/uploads/20220709_065006-1-.webp",
     "bgClassName": "",
     "highlights": [
       {
