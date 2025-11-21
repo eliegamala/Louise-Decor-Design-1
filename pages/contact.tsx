@@ -154,7 +154,7 @@ export default function ContactPage({ page }: any) {
                     href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-secondary w-full text-center"
+                    className="btn w-full text-center bg-[#25D366] hover:bg-[#1ebe5d] text-white border-transparent"
                   >
                     Chat with us on WhatsApp
                   </a>
